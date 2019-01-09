@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
+    "immer": "^1.10.0",
     "open-color": "^1.6.3",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
