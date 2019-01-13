@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import TodoList from './TodoList';
-import securityForm from './SecurityForm';
+import SecurityForm from './hooks/SecurityForm';
 
 export default () => (
   <div className="App">
     <TodoList />
-    <securityForm />
+    <SecurityForm />
   </div>
 );

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { ThemeContext, LocalContext, useWindowWidth } from './contexts';
+import { ThemeContext, LocalContext, useWindowWidth } from './context';
 
 const Greeting = () => {
   const [name, setName] = useState('Mary');

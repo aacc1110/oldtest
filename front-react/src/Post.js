@@ -1,5 +1,5 @@
 import React from 'react';
-import useRequest from './hooks/useRequest';
+import useRequest from './CustomHook/useRequest';
 
 const Post = () => {
   const [response, loading, error] = useRequest(

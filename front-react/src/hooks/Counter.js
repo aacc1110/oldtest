@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
+  const [isHidden, setHidden] = useState(false);
   /* useState 함수의 파라미터로는 사용하고 싶은 상태의 기본값을 넣어줍니다. 우리는 현재 0을 기본값으로 사용하고 있습니다. useState 를 호출하면 배열을 반환하는데, 이 배열의 첫번째 원소는 현재 상태 값과, 두번째 원소는 이 값을 설정해주는 setter 함수입니다. */
 
   useEffect(
@@ -18,12 +19,17 @@ const Counter = () => {
 
   return (
     <div>
+      {/* Number of events <span>{number}</span> */}
+      {isHidden && <Counter Counter={setCount} />}
       <p>You clicked {count} times</p>
       <button type="button" onClick={() => setCount(count + 1)}>
         Click +
       </button>
       <button type="button" onClick={() => setCount(count - 1)}>
         Click -
+      </button>
+      <button type="button" onClick={() => setHidden(!isHidden)}>
+        Show
       </button>
     </div>
   );

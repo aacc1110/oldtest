@@ -9,7 +9,9 @@ import Post from './Post';
 import Greeting from './hookname'; */
 import ShotText from './ShortText';
 import SecurityForm from './hooks/SecurityForm';
-import ShowNumberOfEvents from './hooks/ShowNumberOfEvents'
+import ReducerCount from './store';
+import ShoppingLint from './store/ShoppingList';
+import TextContext from './context/TextContext';
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +56,9 @@ class App extends Component {
           <Greeting /> */}
           <ShotText />
           <SecurityForm />
-          <ShowNumberOfEvents />
+          <ReducerCount />
+          <ShoppingLint />
+          <TextContext />
         </div>
       </div>
     );
