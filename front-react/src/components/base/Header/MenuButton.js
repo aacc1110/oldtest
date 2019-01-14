@@ -4,7 +4,7 @@ import oc from 'open-color';
 import { Link } from 'react-router-dom';
 import { shadow } from '../../../lib/styleUtils';
 
-const BorderedButton = styled(Link)`
+const TestButton = styled(Link)`
   font-weight: 600;
   color: ${oc.cyan[6]};
   border: 1px solid ${oc.cyan[6]};
@@ -27,8 +27,6 @@ const BorderedButton = styled(Link)`
   }
 `;
 
-const LoginButton = () => (
-  <BorderedButton to="/auth/login">로그인 / 가입</BorderedButton>
-);
+const MenuButton = () => <TestButton to="/test/test">Test Button</TestButton>;
 
-export default LoginButton;
+export default MenuButton;

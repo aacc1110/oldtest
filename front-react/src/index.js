@@ -4,8 +4,11 @@ import Root from './Root';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import configureStore from './contexts/configureStore';
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+const store = configureStore();
+
+ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

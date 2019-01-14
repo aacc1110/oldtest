@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import oc from 'open-color';
-import { shadow, media } from '../../../lib/styleUtil';
+import { shadow, media } from '../../../lib/styleUtils';
+import LoginButton from './LoginButton';
 
 // 상단 고정, 그림자
 const Positioner = styled.div`
@@ -42,10 +44,14 @@ const HeaderContents = styled.div`
 
 // 로고
 const Logo = styled.div`
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   letter-spacing: 2px;
   color: ${oc.teal[7]};
   font-family: 'Rajdhani';
+  &:active {
+    /* 마우스 클릭시 아래로 미세하게 움직임 */
+    transform: translateY(2px);
+  }
 `;
 
 // 중간 여백
@@ -59,14 +65,15 @@ const GradientBorder = styled.div`
   background: linear-gradient(to right, ${oc.teal[6]}, ${oc.cyan[5]});
 `;
 
-// eslint-disable-next-line react/prop-types
-const Header = ({ children }) => (
+const Header = () => (
   <Positioner>
     <WhiteBackground>
       <HeaderContents>
-        <Logo>HEURM</Logo>
+        <Logo>
+          <Link to="/">AROOM</Link>
+        </Logo>
         <Spacer />
-        {children}
+        <LoginButton />
       </HeaderContents>
     </WhiteBackground>
     <GradientBorder />
