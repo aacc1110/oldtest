@@ -10,7 +10,7 @@ const FooterPositioner = styled.div`
   position: fixed;
   bottom: 0px;
   width: 100%;
-  ${shadow(1)}
+  ${shadow(3)}
 `;
 
 // 흰 배경, 내용 중간 정렬

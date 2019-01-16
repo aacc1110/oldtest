@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import oc from 'open-color';
-import { shadow, media } from '../../../lib/styleUtils';
-import LoginButton from './LoginButton';
+import { shadow, media } from 'lib/styleUtils';
+import { Link } from 'react-router-dom';
 
 // 상단 고정, 그림자
 const Positioner = styled.div`
@@ -34,24 +33,21 @@ const HeaderContents = styled.div`
   padding-right: 1rem;
   padding-left: 1rem;
   ${media.wide`
-        width: 992px;
-    `}
+    width: 992px;
+  `}
 
   ${media.tablet`
-        width: 100%;
-    `}
+    width: 100%;
+  `}
 `;
 
 // 로고
 const Logo = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   color: ${oc.teal[7]};
   font-family: 'Rajdhani';
-  &:active {
-    /* 마우스 클릭시 아래로 미세하게 움직임 */
-    transform: translateY(2px);
-  }
+  &:hover { color: red; }
 `;
 
 // 중간 여백
@@ -65,19 +61,19 @@ const GradientBorder = styled.div`
   background: linear-gradient(to right, ${oc.teal[6]}, ${oc.cyan[5]});
 `;
 
-const Header = () => (
-  <Positioner>
+const Header = ({children}) => {
+  return (
+   <Positioner>
     <WhiteBackground>
       <HeaderContents>
-        <Logo>
-          <Link to="/">AROOM</Link>
-        </Logo>
-        <Spacer />
-        <LoginButton />
+        <Logo><Link to="/">AROOM</Link></Logo>
+        <Spacer/>
+          {children}
       </HeaderContents>
     </WhiteBackground>
-    <GradientBorder />
+    <GradientBorder/>
   </Positioner>
-);
+  );
+};
 
 export default Header;

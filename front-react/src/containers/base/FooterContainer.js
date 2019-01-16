@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../components/base/Footer';
+import Footer from 'components/Base/Footer';
 
 const FooterContainer = () => <Footer />;
 

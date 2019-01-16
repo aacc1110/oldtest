@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
-import { shadow } from 'lib/styleUtils';
 import { Link } from 'react-router-dom';
+import { shadow } from '../../lib/styleUtils';
 
 // 화면의 중앙에 위치시킨다
 const Positioner = styled.div`
@@ -33,6 +34,10 @@ const Logo = styled(Link)`
   font-size: 2.4rem;
   letter-spacing: 5px;
   text-decoration: none;
+  &:active {
+    /* 마우스 클릭시 아래로 미세하게 움직임 */
+    transform: translateY(2px);
+  }
 `;
 
 // children 이 들어가는 곳
@@ -42,7 +47,7 @@ const Contents = styled.div`
   height: auto;
 `;
 
-const AuthWrapper = ({ children }) => (
+const User = ({ children }) => (
   <Positioner>
     <ShadowedBox>
       <LogoWrapper>
@@ -53,4 +58,4 @@ const AuthWrapper = ({ children }) => (
   </Positioner>
 );
 
-export default AuthWrapper;
+export default User;

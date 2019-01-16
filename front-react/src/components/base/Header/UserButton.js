@@ -4,7 +4,7 @@ import oc from 'open-color';
 import { Link } from 'react-router-dom';
 import { shadow } from 'lib/styleUtils';
 
-const TestButton = styled(Link)`
+const UserHeadertButton = styled(Link)`
   font-weight: 600;
   color: ${oc.cyan[6]};
   border: 1px solid ${oc.cyan[6]};
@@ -27,6 +27,8 @@ const TestButton = styled(Link)`
   }
 `;
 
-const MenuButton = () => <TestButton to="/ztest/ztest">Test Button</TestButton>;
+const UsertButton = () => (
+  <UserHeadertButton to="/user/login">로그인ㅣ가입</UserHeadertButton>
+);
 
-export default MenuButton;
+export default UsertButton;

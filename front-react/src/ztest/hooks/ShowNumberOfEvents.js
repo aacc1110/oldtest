@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { ThemeContext } from '../context/TextContext';
+import { ThemeContext } from 'ztest/context/TextContext';
 
 // eslint-disable-next-line react/prop-types
 const ShowNumberOfEvents = ({ number = 0 }) => {

@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './Root';
-import 'semantic-ui-css/semantic.min.css';
 import './index.css';
+import configureStore from 'redux/configureStore';
+import Root from './Root';
 import * as serviceWorker from './serviceWorker';
-import configureStore from './contexts/configureStore';
+import 'semantic-ui-css/semantic.min.css';
 
 const store = configureStore();
-
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

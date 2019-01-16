@@ -1,12 +1,13 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
+import Header, {
+  LoginButton,
+  MenuButton,
+  UserButton,
+} from 'components/Base/Header';
 import { connect } from 'react-redux';
+import * as userActions from 'redux/modules/user';
 import { bindActionCreators } from 'redux';
-import Header, { LoginButton, MenuButton } from '../../components/base/Header';
-import * as userActions from '../../contexts/modules/user';
-import storage from '../../lib/storage';
+import storage from 'lib/storage';
 
 class HeaderContainer extends Component {
   handleLogout = async () => {
@@ -28,6 +29,7 @@ class HeaderContainer extends Component {
     return (
       <Header>
         <MenuButton />
+        <UserButton />
         {user.get('logged') ? (
           <div>
             {user.getIn(['loggedInfo', 'username'])}{' '}
