@@ -14,7 +14,6 @@ import ReducerCount from './store';
 import ShoppingLint from './store/ShoppingList';
 import TextContext from './context/TextContext';
 
-
 // 흰 배경, 내용 중간 정렬
 const Background = styled.div`
   justify-content: center;
@@ -47,29 +46,27 @@ class App extends Component {
     const modalvi = this.state.modal;
     return (
       <Background>
-        <div>
-          <div className="App">
-            <h1>안녕 리액트!!!</h1>
-            <PhoneForm />
-            <button type="button" onClick={this.handleOpenModal}>
-              모달 열기
-            </button>
-            {modalvi && (
-              <ModalPortal>
-                <MyModal onClose={this.handleCloseModal} />
-                <SecurityForm />
-              </ModalPortal>
-            )}
-            <Counter />
-            <Form />
-            <Post />
-            <Greeting />
-            <ShotText />
-            <SecurityForm />
-            <ReducerCount />
-            <ShoppingLint />
-            <TextContext />
-          </div>
+        <div className="App">
+          <h1>안녕 리액트!!!</h1>
+          <PhoneForm />
+          <button type="button" onClick={this.handleOpenModal}>
+            모달 열기
+          </button>
+          {modalvi && (
+            <ModalPortal>
+              <MyModal onClose={this.handleCloseModal} />
+              <SecurityForm />
+            </ModalPortal>
+          )}
+          <Counter />
+          <Form />
+          <Post />
+          <Greeting />
+          <ShotText />
+          <SecurityForm />
+          <ReducerCount />
+          <ShoppingLint />
+          <TextContext />
         </div>
       </Background>
     );

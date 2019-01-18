@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import Header, {
   LoginButton,
   MenuButton,
   UserButton,
+  HooksButton,
 } from 'components/Base/Header';
 import { connect } from 'react-redux';
 import * as userActions from 'redux/modules/user';
@@ -10,7 +14,7 @@ import { bindActionCreators } from 'redux';
 import storage from 'lib/storage';
 
 class HeaderContainer extends Component {
-  handleLogout = async () => {
+  async handleLogout() {
     const { UserActions } = this.props;
     try {
       await UserActions.logout();
@@ -20,7 +24,7 @@ class HeaderContainer extends Component {
 
     storage.remove('loggedInfo');
     window.location.href = '/'; // 홈페이지로 새로고침
-  };
+  }
 
   render() {
     const { visible, user } = this.props;
@@ -28,6 +32,7 @@ class HeaderContainer extends Component {
 
     return (
       <Header>
+        <HooksButton />
         <MenuButton />
         <UserButton />
         {user.get('logged') ? (

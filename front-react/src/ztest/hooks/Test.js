@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React, { useEffect, useState, useContext } from 'react';
 import { Label, Icon, Input } from 'semantic-ui-react';
-import { ThemeContext } from '../context/TextContext';
+import { ThemeContext } from 'ztest/context/TextContext';
 
 export default function Greeting() {
   const name = useFormInput('Mary');

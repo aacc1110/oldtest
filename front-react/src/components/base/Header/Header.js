@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
@@ -47,7 +48,9 @@ const Logo = styled.div`
   letter-spacing: 2px;
   color: ${oc.teal[7]};
   font-family: 'Rajdhani';
-  &:hover { color: red; }
+  &:hover {
+    color: red;
+  }
 `;
 
 // 중간 여백
@@ -61,19 +64,19 @@ const GradientBorder = styled.div`
   background: linear-gradient(to right, ${oc.teal[6]}, ${oc.cyan[5]});
 `;
 
-const Header = ({children}) => {
-  return (
-   <Positioner>
+const Header = ({ children }) => (
+  <Positioner>
     <WhiteBackground>
       <HeaderContents>
-        <Logo><Link to="/">AROOM</Link></Logo>
-        <Spacer/>
-          {children}
+        <Logo>
+          <Link to="/">AROOM</Link>
+        </Logo>
+        <Spacer />
+        {children}
       </HeaderContents>
     </WhiteBackground>
-    <GradientBorder/>
+    <GradientBorder />
   </Positioner>
-  );
-};
+);
 
 export default Header;

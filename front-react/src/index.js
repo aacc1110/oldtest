@@ -4,7 +4,6 @@ import './index.css';
 import configureStore from 'redux/configureStore';
 import Root from './Root';
 import * as serviceWorker from './serviceWorker';
-import 'semantic-ui-css/semantic.min.css';
 
 const store = configureStore();
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));

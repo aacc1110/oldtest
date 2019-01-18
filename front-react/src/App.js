@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { Home, Auth, Ztest, User } from 'pages';
+import { Home, Auth, Ztest, User, Hooks } from 'pages';
 import { HeaderContainer, FooterContainer } from 'containers/Base';
-
 import storage from 'lib/storage';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -37,6 +37,7 @@ class App extends Component {
         <Route path="/auth" component={Auth} />
         <Route path="/ztest" component={Ztest} />
         <Route path="/user" component={User} />
+        <Route path="/hooks" component={Hooks} />
       </div>
     );
   }
